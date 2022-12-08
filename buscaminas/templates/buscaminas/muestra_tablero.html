@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muestra tablero</title>
+</head>
+<body>
+    <p>Filas: {{ tablero.filas }}</p>
+    <p>Columnas: {{ tablero.columnas }}</p>
+    <p>Minas: {{ tablero.minas }}</p>
+    <table border="solid">
+        {% for f in tablero.filas %}
+            <tr>
+                {% for c in tablero.columnas %}
+                    <td>{{ forloop.counter }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
